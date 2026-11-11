@@ -1,4 +1,4 @@
-# Scope: where to look, and who is looking
+﻿# Scope: where to look, and who is looking
 
 <!--
 This is the real-world scope. It replaces the sandbox scope.md in
@@ -42,4 +42,16 @@ you want to avoid. It still never changes a verdict: fit cannot
 rescue an issue your rubric rejects, and cannot sink one it
 accepts. -->
 
-(Paste your fit profile here.)
+I work mainly in Python. My coursework projects include a small
+RAG-style assistant with its own retriever module and pytest unit tests,
+plus several smaller Python apps, so I am comfortable with pytest,
+reading tracebacks, and fixing bounded backend bugs. I want to get
+better at defensive error handling, regexes, and test-driven fixes in a
+real backend codebase, and I would like a project in the AI/LLM or RAG
+tooling space (libraries, CLIs, or developer tools) if I can find one.
+I have little frontend/TypeScript experience and would rather avoid
+frontend-heavy issues, and I would also rather avoid Docker/CI-pipeline
+work, large refactors, and projects with a stated no-AI-contributions
+policy for my first contribution.
+
+
