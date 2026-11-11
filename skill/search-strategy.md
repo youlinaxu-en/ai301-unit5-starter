@@ -39,13 +39,11 @@ gh search issues --label "good first issue" --language python --state open --lim
 -->
 
 Profile sentence: "I work mainly in Python ... fixing bounded backend bugs."
-gh search issues --label "good first issue" --label bug --language python --state open --no-assignee --sort updated --limit 100 --json title,repository,labels,assignees,commentsCount,updatedAt,url
-
+gh search issues --label "good first issue" --label bug --language python --state open --no-assignee --sort updated --limit 100 --json title,repository,labels,assignees,commentsCount,updatedAt,url -- "-linked:pr"
 Profile sentence: "I would like a project in the AI/LLM or RAG tooling space (libraries, CLIs, or developer tools)."
-gh search issues LLM --label "good first issue" --language python --state open --no-assignee --sort updated --limit 100 --json title,repository,labels,assignees,commentsCount,updatedAt,url
-
+gh search issues LLM --label "good first issue" --language python --state open --no-assignee --sort updated --limit 100 --json title,repository,labels,assignees,commentsCount,updatedAt,url -- "-linked:pr"
 Profile sentence: "I want to get better at ... a real backend codebase" and my RAG retriever coursework.
-gh search issues retriever --label "good first issue" --language python --state open --no-assignee --sort updated --limit 100 --json title,repository,labels,assignees,commentsCount,updatedAt,url
+gh search issues retriever --label "good first issue" --language python --state open --no-assignee --sort updated --limit 100 --json title,repository,labels,assignees,commentsCount,updatedAt,url -- "-linked:pr"
 ## Ranking filters
 
 <!-- Conditions and orderings over the free result fields, applied in
@@ -62,6 +60,7 @@ your ordering. Example SHAPES (write your own):
 - Drop any result not updated in the last 60 days (stale; maintainers likely gone).
 - Drop any result with 10 or more comments (crowded thread; likely claimed, contested or a debate).
 - Drop any result whose labels include frontend, ui, docker, ci or wontfix (profile: avoid frontend and Docker/CI).
+- Keep at most one result per repository (the first after ordering), so one repo's batch of issues cannot fill the top 5.
 - De-duplicate by url, then order by fewest comments first; break ties by most recently updated.
 
 ## How many to grade
@@ -75,4 +74,5 @@ run. You need one good issue, not ten. Raising this number is
 allowed, but it is a decision you state here in a sentence, with the
 cost you are accepting; it is not a number you bump because a scan
 disappointed you once. -->
+
 

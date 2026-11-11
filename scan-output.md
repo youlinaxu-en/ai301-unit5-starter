@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "item": "https://github.com/SU-OSPO/preprint-bot/issues/175",
     "checks": [
@@ -59,6 +59,7 @@
     ],
     "verdict": "reject"
   },
+  {
     "item": "https://github.com/Ergane-Foundation/vajra/issues/101",
     "checks": [
       {"name": "repo-alive", "grade": "pass", "evidence": "archived: false; last push 2026-11-11"},
